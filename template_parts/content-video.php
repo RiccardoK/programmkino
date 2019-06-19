@@ -17,7 +17,7 @@
                 } ?>
 
 
-                Veröffentlicht am xxx<?php the_time('d.m.Y');?> von <?php the_author();?>. <br>Kategorie: <?php the_category(', ');?> <?php the_tags();?></p>
+                Veröffentlicht am <?php the_time('d.m.Y');?> von <?php the_author();?>. <br>Kategorie: <?php the_category(', ');?> <?php the_tags();?></p>
             <?php the_content('Weiterlesen »');?>
 
 </section>
