@@ -1,0 +1,571 @@
+/*
+Theme Name: Programmkino
+Author: Riccardo
+Description: Beispiel-Theme für das Video
+Version: 1.0
+*/
+
+
+
+/* Globals */
+/*##########################*/
+/*##########################*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #122F00;
+    color: white;
+    padding-top: 120px;
+    background-image: radial-gradient(circle, white, transparent);
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: soft-light;
+}
+
+img {
+    max-width:100%;
+    height:auto;
+}
+
+a {
+    color:white;
+}
+
+.container {
+    max-width:1100px;
+    margin:0 auto;
+}
+
+/* =WordPress Core
+--------------------------------------------------------------
+##############################################################*/
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption {
+    background: #fff;
+    color: black;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #eee;
+	clip: auto !important;
+	clip-path: none;
+	color: #444;
+	display: block;
+	font-size: 1em;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+
+/* Header */
+/*##########################*/
+/*##########################*/
+
+.site-header {
+    padding:0 1em;
+    position: relative;
+}
+
+.logo {
+    width:200px;
+    padding:1em;
+    background:rgba(255,255,255,0.3);
+    display:block;
+    margin-bottom: 1em;
+}
+
+@media screen and (min-width:800px) {
+    .site-header {
+        float:left;
+        width:30%;
+    }
+}
+
+/* Suche */
+/*##########################*/
+/*##########################*/
+
+.site-search {
+    position: relative;
+}
+
+.site-search input[type="search"] {
+    width: 100%;
+    padding: .5em 90px .5em .5em;
+    box-sizing: border-box;
+    color:black;
+}
+
+.site-search input[type="submit"] {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    color:black;
+}
+
+@media screen and (min-width:710px) and (max-width:800px) {
+
+    .site-search {
+        position: absolute;
+        top:0;
+        right:1em;
+        width:250px;
+    }
+
+}
+
+
+/* Navigation */
+/*##########################*/
+/*##########################*/
+
+#toggle-nav {
+    position: absolute;
+    right: 1em;
+    top: 0;
+    background: black;
+    width: 60px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.js .site-nav {
+    display:none;
+}
+
+.site-nav {
+    margin-top:1em;
+}
+
+.site-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.site-nav li {
+    margin-bottom: 2px;
+}
+
+.site-nav a {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    display: block;
+    text-decoration: none;
+}
+
+.site-nav a:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.site-nav .current-menu-item a {
+    background:white;
+    color:black;
+}
+
+@media screen and (min-width:710px) and (max-width:800px) {
+    .site-nav li {
+        margin-right: 2px;
+        float: left;
+    }
+}
+
+@media screen and (min-width:710px) {
+    .js .site-nav {
+        display:block;
+    }
+
+    #toggle-nav {
+        display:none;
+    }
+}
+
+/* Main */
+/*##########################*/
+/*##########################*/
+
+@media screen and (max-width:800px) {
+
+    .site-main {
+        padding-top:2em;
+    }
+
+}
+
+@media screen and (min-width:600px) {
+    .site-main {
+        float:right;
+        width:100%;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .site-main {
+        width:70%;
+    }
+}
+
+/* Content */
+/*##########################*/
+/*##########################*/
+
+.site-content {
+     padding:0 1em;
+}
+
+@media screen and (min-width:600px) {
+    .site-content {
+        float:left;
+        width:70%;
+    }
+
+    .page-template-template-no-sidebar .site-content,
+    .page-id-40 .site-content,
+    .home .site-content {
+        width:100%;
+    }
+}
+
+.post, .filme {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 2em;
+    padding-top: 1em;
+    clear:both;
+}
+
+.post:first-child {
+    margin-top:0;
+    border:none;
+    padding-top:0;
+}
+
+.post-meta {
+    font-size:.8em;
+    opacity: .7;
+}
+
+.wp-post-image {
+    float:left;
+    margin:.3em 1em 1em 0;
+    max-width: 45%;
+}
+
+/*  Startseite*/
+/*##########################*/
+/*##########################*/
+
+.container-filme {
+    background:rgba(0,0,0,0.2);
+    padding:1em;
+}
+
+ .container-filme .filme:first-child {
+     padding-top:0;
+     margin-top:0;
+     border:none;
+}
+
+.container-filme .filme .wp-post-image {
+    float:none;
+    margin:0;
+    max-width:100%;
+}
+
+@media screen and (min-width:500px) {
+
+    .container-filme {
+        float:left;
+        width:100%;
+        margin-bottom: 2em;
+        padding-left: .5em;
+        padding-right: .5em;
+    }
+
+    .container-filme .filme {
+        padding-top:0;
+        padding-left:.5em;
+        padding-right:.5em;
+        margin-top:0;
+        border:none;
+        float:left;
+        clear:none;
+        width:33.333%;
+    }
+
+    .single-film {
+       background:rgba(0,0,0,0.2);
+       padding:.5em;
+    }
+
+    .container-posts {
+        clear:both;
+    }
+}
+
+/*  Pagination*/
+/*##########################*/
+/*##########################*/
+
+.pagination {
+    clear:both;
+    padding:1em;
+    background:rgba(0,0,0,0.2);
+}
+
+/*Kommentare*/
+/*##########################*/
+/*##########################*/
+
+
+div.comment-form {
+    margin-top: 4em;
+}
+
+.comment-form input[type=text],
+.comment-form input[type=email],
+.comment-form input[type=url],
+.comment-form textarea {
+    padding:.5em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.22);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.24);
+    margin: .2em 0 1em 0;
+    width:100%;
+}
+
+.comment-form input[type=submit] {
+    background: rgba(255, 255, 255, 0.17);
+    padding: .75em 1.2em;
+    border: 2px solid rgba(255, 255, 255, 0.61);
+    margin-top: -1em;
+}
+
+.comment-list {
+    margin-top: 5em;
+}
+
+.comment-list ul {
+    padding:0;
+    margin:0;
+    list-style: none;
+}
+
+.single-comment {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.single-comment .children {
+    margin-top:1em;
+}
+
+.single-comment .avatar {
+    float:right;
+    border-radius: 32px;
+    object-fit: cover;
+}
+
+/* Sidebar */
+/*##########################*/
+/*##########################*/
+
+.site-sidebar {
+    padding:1em;
+}
+
+.widget {
+    background:rgba(0,0,0,0.3);
+    padding:1em;
+    margin-bottom: 1em;
+}
+
+@media screen and (min-width:600px) {
+    .site-sidebar {
+        float:right;
+        width:30%;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .site-sidebar {
+        margin-top:5em;
+    }
+}
+
+
+
+
+/* Footer */
+/*##########################*/
+/*##########################*/
+
+.site-footer {
+    padding:1em;
+    background:rgba(0,0,0,0.3);
+    margin-top: 5em;
+}
+
+
+.nav-social ul,
+.nav-secondary ul {
+    padding:0;
+    margin:0;
+    list-style: none;
+}
+
+.nav-social li,
+.nav-secondary li {
+    margin-bottom: 2px;
+}
+
+.nav-social a,
+.nav-secondary a {
+    display:block;
+    padding:1em;
+    background:rgba(0,0,0,0.3);
+    text-decoration: none;
+}
+
+.nav-social a:hover,
+.nav-secondary a:hover {
+    background:rgba(0,0,0,0.15);
+}
+
+.nav-secondary .current-menu-item a {
+    background:white;
+    color:black;
+}
+
+.nav-social .twitter a:hover {
+    background:#55acee;
+    color:white;
+}
+
+.nav-social .facebook a:hover {
+    background:#3b5998;
+    color:white;
+}
+
+
+@media screen and (min-width:600px) {
+    .site-footer {
+        float:left;
+        width:100%;
+    }
+
+    .nav-secondary {
+        float:right;
+    }
+
+    .nav-social {
+        float:left;
+    }
+
+    .nav-social li,
+    .nav-secondary li {
+        float:left;
+        margin-right:2px;
+    }
+}
