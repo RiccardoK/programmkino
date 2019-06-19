@@ -58,6 +58,9 @@
 
 <?php wp_footer();?>
 
+
+<!--  Funktion für Slider-->
+<!--#####################-->
 <script>
 
 jQuery(document).ready(function(){
@@ -76,6 +79,18 @@ jQuery(document).ready(function(){
 });
 
 </script>
+
+
+<!--  Funktion für Lightbox pic Beitrag-->
+<!--#####################-->
+<script>
+
+jQuery(function( $ ){
+ jQuery('a[href*=".jpg"], a[href*=".jpeg"], a[href*=".png"], a[href*=".gif"]').attr('data-lightbox','roadtrip');
+});
+
+</script>
+
 
 </body>
 </html>
