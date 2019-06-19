@@ -85,7 +85,10 @@ jQuery(document).ready(function(){
 <!--#####################-->
 <script>
 
+
 jQuery(function( $ ){
+
+  /* erzeugen von Selector für Links welche auf .jpg etc enden & hinzufügen Attribut "data-lightbox" */
  jQuery('a[href*=".jpg"], a[href*=".jpeg"], a[href*=".png"], a[href*=".gif"]').attr('data-lightbox','roadtrip');
 });
 
