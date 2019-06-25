@@ -31,6 +31,6 @@
     </article>
 
 
-</main>
+</main >
 
 <?php get_footer();?>
