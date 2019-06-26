@@ -196,7 +196,12 @@
 
 
 
+//Festlegen der "Content width"!!
+//#####################################
 
+    if ( ! isset( $content_width ) ) {
+    	$content_width = 507;
+    }
 
 
 
