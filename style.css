@@ -447,6 +447,13 @@ a img.aligncenter {
     max-width: 45%;
 }
 
+.infobox {
+    padding:1em;
+    background:gold;
+    color:black;
+}
+
+
 /*  Startseite*/
 /*##########################*/
 /*##########################*/
