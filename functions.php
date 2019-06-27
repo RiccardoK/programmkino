@@ -215,10 +215,28 @@
               ), $atts )
           );
 
-
           return '<' . $htmltag . '>In diesem Film kostet Popcorn nur 2 Euro!</' . $htmltag . '>';
       }
       add_shortcode( 'popcorn', 'wpv_shortcode1' );
+
+
+
+            //Add  "umschliessender Shortcode" !!
+            //#####################################
+            // Add Shortcode
+            //Info über "umschliessenden SC" :   = null
+            function wpv_shortcode2( $atts, $content = null ) {
+               // rendern von <div> mit Klasse "Infobox"; überschrift H3
+               //Inhalt ist der umschlossene Satz im Backend
+                return '<div class="infobox"><h3>Info:</h3>'.$content.'</div>';
+            }
+
+            add_shortcode( 'infobox', 'wpv_shortcode2' );
+
+
+
+
+
 
 
 
