@@ -88,6 +88,14 @@
             add_action( 'init', 'wpv_ct_sprachen', 0 );
 
 
+      // Custom backgrounds
+      //#####################
+
+
+      add_theme_support( 'custom-background' );
+
+
+
     // Beitragsbilder
     //#####################
 
