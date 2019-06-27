@@ -27,6 +27,29 @@
             'posts_per_page' => 3,
             'offset' => $offset,
             'paged' => $paged
+
+
+            /*'meta_query' => array(
+                            array(
+                                'key' => 'wpv_film_fsk',
+                                'value' => '16',
+                            ),
+                        ),  */
+
+
+                      'orderby' => 'meta_value',
+                      'order' => 'DESC', // ASC
+                      'meta_query' => array(
+                          array(
+                              'key'     => 'wpv_film_start',
+                              'value'   => getdate(), // Aktuelles Datum
+                              'compare' => '>'
+                                ),
+                      ),
+
+
+
+
         );
 
         $loop2 = new WP_Query($args);

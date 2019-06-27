@@ -37,18 +37,6 @@ get_header();?>
             'paged' => $paged
         );
 
-        /*
-       'meta_query' => array(
-           array(
-               'key' => 'wpv_film_fsk',
-               'value' => '16',
-           ),
-       ),
-       */
-
-
-
-
 
         /* Übergeben der Argumente (args)  in Wp Query and dann Loopen der Beiträge  */
         /* ###################################### */
