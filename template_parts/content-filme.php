@@ -37,6 +37,9 @@
                 }
             ?>
 
+            <!-- Ausgabe Beispile ACF Filmdauer -->
+            <?php the_field('wpv_film_time'); ?>
+
 
 
 
