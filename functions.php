@@ -203,6 +203,23 @@
     	$content_width = 507;
     }
 
+    //Add Shortcode Simple !!
+    //#####################################
+    // Add Shortcode
+    function wpv_shortcode1( $atts ) {
+
+          // Attributes
+          extract( shortcode_atts(
+              array(
+                  'htmltag' => 'h3',
+              ), $atts )
+          );
+
+
+          return '<' . $htmltag . '>In diesem Film kostet Popcorn nur 2 Euro!</' . $htmltag . '>';
+      }
+      add_shortcode( 'popcorn', 'wpv_shortcode1' );
+
 
 
 ?>
