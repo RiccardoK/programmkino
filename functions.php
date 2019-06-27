@@ -92,7 +92,15 @@
       //#####################
 
 
-      add_theme_support( 'custom-background' );
+//Festlegen der Standartfarbe des themes 
+      $defaults = array(
+      	'default-color'          => '#122F00',
+      	'default-image'          => '',
+);
+
+
+add_theme_support( 'custom-background', $defaults );
+
 
 
 
