@@ -2,6 +2,11 @@
 
 /* Template Name: Keine Sidebar */
 
+/* Seiteninhalt für Programm */
+/* #########################r */
+
+
+
 get_header();?>
 
 <main class="site-main">
@@ -17,17 +22,36 @@ get_header();?>
 
 
 
-        <?php
 
+
+        <!--/* Definieren welcher Post angezeigt wird*/
+        /* ###################################### */-->
+
+        <?php
 
         $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
-
         $args = array(
             'post_type' => 'filme',
-            'posts_per_page' => 1,
+            'posts_per_page' => 3,
             'paged' => $paged
         );
+
+        /*
+       'meta_query' => array(
+           array(
+               'key' => 'wpv_film_fsk',
+               'value' => '16',
+           ),
+       ),
+       */
+
+
+
+
+
+        /* Übergeben der Argumente (args)  in Wp Query and dann Loopen der Beiträge  */
+        /* ###################################### */
 
         $loop2 = new WP_Query($args);
 
