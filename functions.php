@@ -88,18 +88,25 @@
             add_action( 'init', 'wpv_ct_sprachen', 0 );
 
 
+
+      // Custom Headers
+      //#####################
+        add_theme_support( 'custom-header' );
+
+
+
       // Custom backgrounds
       //#####################
 
 
-//Festlegen der Standartfarbe des themes 
+//Festlegen der Standartfarbe des themes
       $defaults = array(
       	'default-color'          => '#122F00',
       	'default-image'          => '',
 );
 
 
-add_theme_support( 'custom-background', $defaults );
+  add_theme_support( 'custom-background', $defaults );
 
 
 
