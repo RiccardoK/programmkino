@@ -26,11 +26,11 @@ body {
 }
 
 /*  obigen werte durch erstellte klasse im customizer überschreiben */
-body.custom-background{
+/*body.custom-background{
     background-size: auto;
-    /*background-blend-mode: normal;*/
+    background-blend-mode: normal;
 
-}
+}*/
 
 img {
     max-width:100%;
