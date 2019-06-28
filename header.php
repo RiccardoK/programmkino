@@ -11,12 +11,39 @@
     <?php wp_enqueue_script('jquery');?>
     <?php wp_enqueue_script('comment-reply'); ?>
     <?php wp_head();?>
+
+    <style>
+
+            .container::before {
+                content:'';
+                display:block;
+                position: absolute;
+                top:0;
+                left:0;
+                right:0;
+                height:<?php echo get_custom_header()->height; ?>px;
+                background:url(<?php header_image();?>) top center no-repeat;
+            }
+            /* Wenn Adminbar angezeigt wird dann padding top um 32 erhöhen-  */
+            .admin-bar .container::before {
+                top:32px;
+            }
+
+            body {
+                padding-top:calc(<?php echo get_custom_header()->height; ?>px + 20px);
+            }
+
+        </style>
+
+
+
+
 </head>
 
 <body <?php body_class();?>>
 
-<div class="container">  <!-- Container beginnt; ended in footer -->
 
+<div class="container">  <!-- Container beginnt; ended in footer -->
 <header class="site-header">
   <!-- //  Logobereich oben //  -->
     <a class="logo" href="<?php echo home_url('/');?>">

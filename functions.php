@@ -91,15 +91,23 @@
 
       // Custom Headers
       //#####################
-        add_theme_support( 'custom-header' );
+
+
+      $defaults = array(
+        //Weite aus Css entnehmen (1100)
+        	'width'                  => 1100,
+        	'height'                 => 200,
+        	'flex-height'            => true,
+        	'flex-width'             => true,
+
+        );
+        add_theme_support( 'custom-header', $defaults );
 
 
 
       // Custom backgrounds
       //#####################
-
-
-//Festlegen der Standartfarbe des themes
+      //Festlegen der Standartfarbe des themes
       $defaults = array(
       	'default-color'          => '#122F00',
       	'default-image'          => '',
