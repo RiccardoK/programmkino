@@ -266,6 +266,9 @@
 
 
 
+            // Customizer
+            require_once(get_template_directory() . '/customizer.php');
+
 
 
 
