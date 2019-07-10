@@ -219,6 +219,14 @@ a img.aligncenter {
 	padding: 0;
 }
 
+
+.btn {
+    padding:1em 1.5em;
+    border-radius: 3px;
+    background:rgba(255,255,255,0.3);
+    display: inline-block;
+}
+
 /* #######Ende css aus backend für Gallery##########*/
 /* ################################*/
 
