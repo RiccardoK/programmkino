@@ -304,4 +304,41 @@
 
 
 
+  function wpv_add_editor_styles() {
+      add_editor_style( 'style-editor.css' );
+  }
+
+  add_action( 'admin_init', 'wpv_add_editor_styles' );
+
+
+  /**
+     * Add a widget to the dashboard.
+     *
+     * This function is hooked into the 'wp_dashboard_setup' action below.
+     */
+    function wpv_add_dashboard_widget() {
+
+        wp_add_dashboard_widget(
+                     'example_dashboard_widget',         // Widget slug.
+                     'Dokumentation für dieses Theme',         // Title.
+                     'wpv_dashboard_widget_content' // Display function.
+            );
+    }
+    add_action( 'wp_dashboard_setup', 'wpv_add_dashboard_widget' );
+
+
+
+    /**
+     * Create the function to output the contents of our Dashboard Widget.
+     */
+    function wpv_dashboard_widget_content() {
+
+        // Display whatever it is you want to show.
+        echo '<p>Es können folgende Shortcodes verwendet werden:</p><ul><li>[infobox]</li><li>[popcorn htmltag=""]</li></ul>';
+    }
+
+
+
+
+
 ?>
